@@ -1,0 +1,32 @@
+{
+  "name": "angular-markdown-editor",
+  "repo": "enome-components/angular-markdown-editor",
+  "description": "Markdown directive for Angular.js with file-manager",
+  "version": "1.0.0",
+  "keywords": [
+    "angular",
+    "markdown",
+    "editor",
+    "file-manager"
+  ],
+  "dependencies": {
+    "component/marked": "*",
+    "necolas/normalize.css": "*",
+    "enome-components/webfont": "*",
+    "enome-components/angular-file-manager": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js",
+    "src/controllers.js",
+    "src/directives.js",
+    "src/filters.js",
+    "src/factories.js"
+  ],
+  "styles": [
+    "main.css"
+  ]
+}

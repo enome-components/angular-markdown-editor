@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='my-app'>
+  <head>
+    <title>enome/markdown-editor-angular</title>
+    <link href='build.css' rel='stylesheet' type='text/css' />
+
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js'></script>
+    <script src='build.js'></script>
+    <script>
+      require('angular-markdown-editor');
+      var module = angular.module('my-app', ['markdown-editor']);
+
+      module.controller('Ctrl', function ($scope) {
+        $scope.data = '# This is a title\n\n ## This is a sub-title';
+        $scope.$watch('data', function () {});
+      });
+    </script>
+  </head>
+  <body ng-controller='Ctrl'>
+    <markdown-editor data='data' fileserver='"/fileserver"'/>
+  </body>
+</html>
