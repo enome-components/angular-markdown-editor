@@ -1,7 +1,8 @@
 require('webfont');
-require('angular-file-manager');
 
-var module = window.angular.module('markdown-editor', ['file-manager']);
+var module = window.angular.module('markdown-editor', [
+  require('angular-file-manager')
+]);
 
 module.run(['$templateCache', function ($templateCache) {
   window.WebFont.load({ google: { families: ['Open Sans:300,400,700', 'Droid Serif:400'] } });
@@ -17,3 +18,5 @@ module.controller('MarkdownEditorCtrl', controllers.MarkdownEditorCtrl);
 module.filter('markdown', filters.markdown);
 module.factory('stringBuilder', factories.stringBuilder);
 module.factory('selection', factories.selection);
+
+module.exports = 'markdown-editor';
