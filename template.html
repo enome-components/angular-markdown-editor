@@ -1,7 +1,7 @@
 <div class='markdowneditor'>
 
   <div class='actionbar'>
-    <button ng-click='toggleFileManager()' title='Insert images and files'>Insert file</button>
+    <button type='button' ng-click='toggleFileManager()' title='Insert images and files'>Insert file</button>
   </div>
 
   <div class='insert'>
@@ -13,9 +13,9 @@
   <div ng-show='show_file_manager' class='file-manager-overlay'>
     <file-manager url='fileserver' selected='selected_files'></file-manager>
     <div class='actions'>
-      <button ng-click='insertImage()' ng-disabled='!selected_files.length'>Insert As Image</button>
-      <button ng-click='insertLink()' ng-disabled='!selected_files.length'>Insert As Link</button>
-      <button ng-click='toggleFileManager()'>Cancel</button>
+      <button type='button' ng-click='insertImage()' ng-disabled='!selected_files.length'>Insert As Image</button>
+      <button type='button' ng-click='insertLink()' ng-disabled='!selected_files.length'>Insert As Link</button>
+      <button type='button' ng-click='toggleFileManager()'>Cancel</button>
     </div>
   </div>
 
